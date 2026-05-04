@@ -3,27 +3,6 @@ $page_title = "Edit Data Buku";
 require_once '../../config/database.php';
 require_once '../../includes/header.php';
 
-/*
-SEKARANG SUDAH JELAS:
-TABEL buku kamu TIDAK punya kolom:
-
-pengarang
-penerbit
-isbn
-deskripsi
-
-Jadi saya buat versi FIX TOTAL
-pakai kolom yang PASTI ada:
-
-id_buku
-judul
-tahun_terbit
-harga
-stok
-
-Kalau ada kolom lain tinggal tambah nanti.
-*/
-
 if (!isset($_GET['id'])) {
     header("Location:index.php");
     exit();
